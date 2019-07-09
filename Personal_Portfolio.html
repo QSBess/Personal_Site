@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Personal Profile</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Amaranth|Bad+Script&display=swap" rel="stylesheet">
+<style>
+	body {
+		background-image: radial-gradient(#FF6633, #FFFF66, #FF9999, #3300CC);
+	}
+	#navbar {
+		background-color: #D14747;
+		font-family: 'Amaranth', sans-serif;
+		font-size: 150%;
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		margin: 0;
+		z-index: 1;
+	}
+	@media (max-width: 750px) {
+		#navbar {
+			font-size: 120%;
+		}
+	}
+	@media (max-width: 600px) {
+		#navbar {
+			font-size: 110%;
+		}
+	}
+	nav ul {
+		list-style-type: none;
+		display: flex;
+		justify-content: flex-end;
+		padding-right: 25px;
+	}
+	nav li {
+		padding: 10px;		
+	}
+	nav a {
+		color: #FFFFB4;
+		text-decoration: none;
+	}
+	section {
+		background-color: #D65C5C;
+		background-color: rgb(204,51,51,0.40);
+		width: 60vw;
+		padding: 100px;
+		margin: auto;		
+		border: 3px solid #FFFF8D;
+	}
+	@media (max-width: 750px) {
+		section {
+			padding: 85px;
+		}
+	}
+	@media (max-width: 600px) {
+		section {
+			padding: 70px;
+		}
+	}
+	#welcome-section {
+		color: #3300CC;
+		font-family: 'Bad Script', cursive;
+		font-size: 200%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;		
+		height: 100vh;
+	}
+	@media (max-width: 750px) {
+		#welcome-section {
+			font-size: 175%;
+		}
+	}
+	@media (max-width: 600px) {
+		#welcome-section {
+			font-size: 125%;
+		}
+	}
+	#welcome-section h1, 
+	#welcome-section p {
+		position: relative;
+		top: 20%;
+	}
+	#projects {
+		font-family: 'Amaranth', sans-serif;
+		font-size: 120%;
+		display: grid;
+		display: -ms-grid;
+		grid-template-columns: repeat(2, 50%);
+		-ms-grid-columns: (50%)[2];
+		grid-auto-rows: minmax(100px, auto);
+		margin-top: 10px;
+	}
+	@media (max-width: 600px) {
+		#projects {		
+			font-size: 100%;
+			display: block;
+		}
+	}
+	.project-tile {
+		background-color: #D14747;
+		padding: 5px;
+		margin: 10px;
+		text-align: center;	
+	}
+	@media (max-width: 1150px) {
+		.project-tile {
+		padding-right: 25px;		
+		padding-left: 25px;
+		}
+	}
+	
+	@media (max-width: 750px) {
+		.project-tile {
+			font-size: 90%;
+		}
+	}
+	#project-header {
+		color: #4400CC;
+		grid-column: 1/ span 2;
+		-ms-grid-column: 1;
+		grid-row: 1;
+		-ms-grid-row: 1;
+		position: relative;
+		bottom: 20%;
+	}
+	#tribute-pg {
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-row: 2;
+		-ms-grid-row: 2;
+	}
+	#survey-pg {
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-row: 2;
+		-ms-grid-row: 2;
+	}
+	#project-pg {
+		grid-column: 1;
+		-ms-grid-column: 1;
+		grid-row: 3;
+		-ms-grid-row: 3;
+	}
+	#tech-doc-pg {
+		grid-column: 2;
+		-ms-grid-column: 2;
+		grid-row: 3;
+		-ms-grid-row: 3;
+	}
+	.project-link {
+		text-decoration: none;
+	}
+	.project-image {
+		width: 75%;
+		height: auto;
+	}
+	.project-description, .project-title {
+		color: #FFFF8D;
+	}
+	#profile {
+		font-family: 'Amaranth', sans-serif;
+		font-size: 120%;
+		margin-top: 10px;
+	}
+	#profile-header {
+		color: #4400CC;
+		margin-bottom: 125px;
+	}
+	#profile-div {
+		text-align: center;
+		position: relative;
+		right: 1%;
+	}
+	#profile-link, .profile-links {
+		color: #FFFF8D;
+		background-color: #D14747;
+		text-decoration: none;
+		padding: 25px;
+		margin: 25px;
+		border-radius: 40px;
+	}
+	@media (max-width: 1150px) {
+		#profile-header {
+			margin-bottom: 200px;
+		}
+		#profile-div {
+			position: relative;
+			width: 150%;
+			right: 25%;
+		}
+		#profile-link {
+			position: relative;	
+			bottom: 90px;
+			left: 130px;
+		}
+		.profile-links {
+			position: relative;
+			right: 150px;
+			margin: 0;
+		}
+	}
+	@media (max-width: 750px) {
+		#profile-header {
+				font-size: 90%;
+				margin-bottom: 0;
+		}
+		#profile-div {
+				font-size: 85%;
+				display: flex;
+				flex-direction: column;
+		}
+		#profile-link {
+				width: 40%;
+				left: 22%;
+				bottom: 0;
+				margin-bottom: 10px;
+		}
+		.profile-links {
+				width: 40%;
+				left: 25%;
+				top: 10%;
+				margin: 10px;
+		}
+	}
+</style>
+</head>
+<body>
+<nav id="navbar">
+<ul>
+	<li><a href="#welcome-section">Welcome</a></li>
+	<li><a href="#projects">Projects</a></li>
+	<li><a href="#profile">Profile</a></li>
+</ul>
+</nav>
+
+<section id="welcome-section">
+<h1>Welcome To My Page!</h1>
+<p>Sara Elizabeth, web developer</p>
+</section>
+
+<section id="projects">
+<header class="section-headers" id="project-header">
+	<h2 class="section-heading">Projects</h2>
+	<p class="section-description">Here are some of my webpage projects. Please enjoy!</p>
+</header>
+	<div class="project-tile" id="tribute-pg">
+		<h3 class="project-title">Tribute Page</h3>
+		<a class="project-link" href="https://codepen.io/QSBess/full/LKeJMM" target="_blank">
+		<img class="project-image" src="https://screenshot.codepen.io/3348909.LKeJMM.small.ca1816e8-ad63-47c3-9143-7acce843283e.png" alt="Queen Elizabeth Tribute Page">
+		<p class="project-description">A tribute to Queen Elizabeth I, Queen of England.</p>
+		</a>
+	</div>
+	<div class="project-tile" id="survey-pg">
+		<h3 class="project-title">Survey Form</h3>
+		<a class="project-link" href="https://codepen.io/QSBess/full/BgJqyz" target="_blank">
+		<img class="project-image" src="https://screenshot.codepen.io/3348909.BgJqyz.small.06f1530c-ef0a-46d2-a2f9-f91815a17ad5.png" alt="Survey Form Page">
+		<p class="project-description">Generic customer satisfaction survey form.</p>
+		</a>
+	</div>
+	<div class="project-tile" id="project-pg">
+		<h3 class="project-title">Business Web Page</h3>
+		<a class="project-link" href="https://codepen.io/QSBess/full/WqdaxO" target="_blank">
+		<img class="project-image" src="https://screenshot.codepen.io/3348909.WqdaxO.small.82aaaea8-8007-43de-8de5-380dca0ddc7f.png" alt="Deck Business Page">
+		<p class="project-description">Webpage for a deck/outdoor structure building business.</p>
+		</a>
+	</div>
+	<div class="project-tile" id="tech-doc-pg">
+		<h3 class="project-title">HTML Documentation Page</h3>
+		<a class="project-link" href="https://codepen.io/QSBess/full/rEpqjZ" target="_blank">
+		<img class="project-image" src="https://screenshot.codepen.io/3348909.rEpqjZ.small.4e42e6cc-b957-43a7-af3c-543481e07754.png" alt="HTML Documentation Page">
+		<p class="project-description">Basic/Beginner HTML technincal documentation page.</p>
+		</a>
+	</div>
+</section>
+
+<section id="profile">
+<header class="section-headers" id="profile-header">
+	<h2 class="section-heading">Profile:</h2>
+	<p class="section-description">For more information about me, or for contact, check out the links below. Thank you, have a great day!</p>
+</header>
+	<div id="profile-div">
+		<a id="profile-link" href="https://www.freecodecamp.org/saraelizabeth" target="_blank">
+		FreeCodeCamp Profile</a>
+		<a class="profile-links" href="https://www.facebook.com/QSBess" target="_blank">
+		Facebook Profile</a>
+		<a class="profile-links" href="mailto:QueenSBess333@outlook.com" target="_blank">
+		Email</a>
+	</div>
+</section>
+</body>
+</html>
